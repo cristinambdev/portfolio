@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'DM Serif Display', serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --color-cream: #F7F4EE;
+  --color-brand-green: #15803d;
+  --color-brand-orange: #b45309;
+  --color-brand-orange-light: #f59e0b;
+}
+
+body {
+  @apply bg-cream text-zinc-900 antialiased selection:bg-brand-green selection:text-white;
+}
