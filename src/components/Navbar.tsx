@@ -11,7 +11,8 @@ export default function Navbar() {
       {/* Navigation */}
       <div className="flex items-center gap-8">
         <nav className="hidden md:flex gap-8 text-xs font-semibold tracking-widest text-zinc-500 uppercase">
-<a href="#" className="hover:text-zinc-900 hover:underline underline-offset-4 decoration-brand-green transition-all">Home</a>
+
+          <a href="#" className="text-zinc-900 underline hover:text-zinc-900 hover:underline underline-offset-4 decoration-brand-green transition-all">Home</a>
           <a href="#" className="hover:text-zinc-900 hover:underline underline-offset-4 decoration-zinc-900 transition-all">Projects</a>
           <a href="#" className="hover:text-zinc-900 hover:underline underline-offset-4 decoration-zinc-900 transition-all">About</a>
         </nav>
