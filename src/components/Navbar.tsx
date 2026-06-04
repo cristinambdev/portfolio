@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="flex items-center justify-between">
       {/* Logo */}
       <div className="font-serif text-2xl font-bold tracking-tight">
-        cristina<span className="text-brand-green">dev</span>
+        crismb<span className="text-brand-green">dev</span>
       </div>
 
       {/* Navigation */}
