@@ -20,7 +20,7 @@ export default function Navbar() {
         />
 
         <div className="hidden sm:block">
-          crismb<span className="text-brand-green">dev</span>
+          crismb<span className="text-brand-brick-red">dev</span>
         </div>
       </div>
 

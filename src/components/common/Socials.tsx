@@ -1,22 +1,22 @@
-import { CiMail } from "react-icons/ci";
-import { SlSocialLinkedin, SlSocialGithub  } from "react-icons/sl";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Socials = () => {
   return (
      <div className="flex gap-4 mt-8">
         {[
           {
-            Icon: CiMail,
+            Icon: MdEmail ,
             url: "mailto:mosquera.cristina@gmail.com",
             label: "Email Me"
           },
           {
-            Icon: SlSocialLinkedin,
+            Icon: FaLinkedin,
             url: "https://www.linkedin.com/in/cristina-m-blanco-dev",
             label: "LinkedIn Profile"
           },
           {
-            Icon: SlSocialGithub,
+            Icon: FaGithub,
             url: "https://github.com/cristinambdev",
             label: "GitHub Profile"
           }

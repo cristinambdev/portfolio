@@ -1,4 +1,5 @@
 import PageHeader from "../components/common/PageHeader";
+import ContactForm from "../components/sections/ContactForm";
 
 export default function ContactPage() {
     return (
@@ -9,6 +10,9 @@ export default function ContactPage() {
                  title="Contact"
                  highlight="Me"
                />
+               {/* Contact Form */}
+               <ContactForm />
+
             </div>
         </>
     );
