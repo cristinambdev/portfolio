@@ -1,6 +1,12 @@
-import { IoSunnyOutline } from "react-icons/io5";
+import { useState } from "react";
+import {IoMenuOutline, IoCloseOutline } from "react-icons/io5";
+import ThemeToggle from "./common/ThemeToggle";
+import NavLinks from "./common/NavLinks";
+import MobileMenu from "./common/MobileMenu";
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="flex items-center justify-between">
       {/* Logo */}
@@ -9,20 +15,21 @@ export default function Navbar() {
       </div>
 
       {/* Navigation */}
-      <div className="flex items-center gap-8">
-        <nav className="hidden md:flex gap-8 text-xs font-semibold tracking-widest text-zinc-500 uppercase">
+      <div className="flex items-center gap-4 md:gap-8">
+          <NavLinks />
 
-          <a href="#" className="text-zinc-900 underline hover:text-zinc-900 hover:underline underline-offset-4 decoration-brand-green transition-all">Home</a>
-          <a href="#" className="hover:text-zinc-900 hover:underline underline-offset-4 decoration-zinc-900 transition-all">Projects</a>
-          <a href="#" className="hover:text-zinc-900 hover:underline underline-offset-4 decoration-zinc-900 transition-all">About</a>
-        </nav>
-
-        {/* Theme Toggle Button */}
-        <button className="w-14 h-7 bg-brand-orange rounded-full p-1 flex items-center justify-end shadow-inner cursor-pointer hover:bg-orange-400 transition-colors">
-          <div className="w-5 h-5 bg-white rounded-full flex items-center justify-center shadow-sm">
-            <IoSunnyOutline size={12} className="text-brand-orange" />
-          </div>
+        {/* Mobile Menu Button */}
+        <button
+          aria-label="Toggle Menu"
+          className="md:hidden text-zinc-600 hover:text-zinc-900 transition-colors"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <IoCloseOutline size={24} /> : <IoMenuOutline size={24} />}
         </button>
+        {/* The Extracted Mobile Menu */}
+        <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
+
+        {/* Theme Toggle */}
+        <ThemeToggle />
       </div>
     </header>
   );
