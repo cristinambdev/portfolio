@@ -1,8 +1,9 @@
 import { useState } from "react";
+import logoIcon from "../../assets/icons/logo-icon.svg";
 import {IoMenuOutline, IoCloseOutline } from "react-icons/io5";
-import ThemeToggle from "./common/ThemeToggle";
-import NavLinks from "./common/NavLinks";
-import MobileMenu from "./common/MobileMenu";
+import ThemeToggle from "../common/ThemeToggle";
+import NavLinks from "../common/NavLinks";
+import MobileMenu from "../common/MobileMenu";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,16 @@ export default function Navbar() {
     <header className="flex items-center justify-between">
       {/* Logo */}
       <div className="font-serif text-2xl font-bold tracking-tight">
-        crismb<span className="text-brand-green">dev</span>
+
+        <img
+          src={logoIcon}
+          alt="crismbdev logo"
+          className="sm:hidden w-7 h-7"
+        />
+
+        <div className="hidden sm:block">
+          crismb<span className="text-brand-green">dev</span>
+        </div>
       </div>
 
       {/* Navigation */}

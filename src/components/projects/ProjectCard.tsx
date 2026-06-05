@@ -1,0 +1,72 @@
+import type { ProjectProps, LinkProps } from "../../types";
+
+export default function ProjectCard({
+  title,
+  description,
+  techStacks,
+  links
+}: ProjectProps) {
+
+  // Tech Badges
+  const techStacksEntry = techStacks.map((techStack: string, index:number) => (
+    <span
+      key={index}
+      className="mr-2 mb-2 px-2.5 py-1 text-[10px] font-mono font-semibold uppercase tracking-widest rounded-sm border border-brand-green/30 bg-brand-green/5 text-brand-green"
+    >
+      {techStack}
+    </span>
+  ));
+
+  // Social/Repo Links
+  const linksEntry = links.map((link: LinkProps, index: number) => (
+    <li key={index} className="z-10">
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={link.label}
+        className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-500 hover:text-brand-orange hover:border-brand-orange/50 hover:bg-orange-50 transition-all"
+      >
+        {link.icon}
+      </a>
+    </li>
+  ));
+
+  // Determine the main click target for the Title
+  const mainUrl = links.find(({ label }) => label === 'Source code')?.url ??
+                  links.find(({ label }) => label === 'Live')?.url ??
+                  '#';
+
+  return (
+    // The "group" class that allows to trigger hover effects on child elements
+    <div className="group flex flex-col justify-between p-6 sm:p-8 rounded-2xl border border-zinc-200 bg-white/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all h-full">
+
+      <header>
+        <h3 className="font-serif text-2xl font-bold mb-3">
+          {/* Main Title Link */}
+          <a
+            href={mainUrl}
+            className="text-zinc-900 group-hover:text-brand-green transition-colors focus:outline-none"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {title}
+
+            {/* Invisible overlay so clicking anywhere on the top of the card opens the link */}
+            <span className="absolute inset-0 z-0 hidden sm:block" aria-hidden="true"></span>
+          </a>
+        </h3>
+
+        <p className="text-zinc-600 text-sm md:text-base leading-relaxed mb-8 relative z-10">
+          {description}
+        </p>
+      </header>
+
+      <footer className="relative z-10">
+        <div className="mb-6 flex flex-wrap">{techStacksEntry}</div>
+        <ul className="flex space-x-3">{linksEntry}</ul>
+      </footer>
+
+    </div>
+  );
+}

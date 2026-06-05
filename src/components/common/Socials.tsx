@@ -28,7 +28,7 @@ const Socials = () => {
             target={url.startsWith('mailto') ? "_self" : "_blank"}
             rel={url.startsWith('mailto') ? undefined : "noopener noreferrer"}
             aria-label={label}
-            className="w-12 h-12 flex items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50/50 text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900 hover:border-zinc-300 hover:shadow-sm transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-500 hover:text-brand-orange hover:border-brand-orange/50 hover:bg-orange-50 transition-all"
           >
             <Icon size={20} />
           </a>

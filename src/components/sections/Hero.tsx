@@ -1,4 +1,4 @@
-import Socials from "./common/Socials";
+import Socials from "../common/Socials";
 
 export default function Hero() {
   return (
@@ -28,7 +28,7 @@ export default function Hero() {
         {/* Line 3 (Desktop) / Lines 4 & 5 (Mobile) */}
         <span>and robust </span>
         <br className="md:hidden" />
-        <span className="italic text-brand-orange whitespace-nowrap">backend systems.</span>
+        <span className="italic text-brand-brick-red whitespace-nowrap">backend systems.</span>
 
       </h1>
 
