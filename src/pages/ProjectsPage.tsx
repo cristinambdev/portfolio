@@ -1,11 +1,15 @@
 import { useState } from "react";
-import FeaturedProjects from "../components/sections/FeaturedProjects";
 import PageHeader from "../components/common/PageHeader";
 import ProjectFilter from "../components/projects/ProjectFilter";
+import Projects from "../components/projects/Projects";
 import { allTechStacks, projectsData } from "../constants/projects";
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState<string>("All");
+
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter((current) => (current === filter ? "All" : filter));
+  };
 
   const filteredProjects =
     activeFilter === "All"
@@ -14,23 +18,30 @@ export default function ProjectsPage() {
           project.techStacks.includes(activeFilter)
         );
 
-  const handleFilterClick = (filter: string) => {
-    setActiveFilter((current) => (current === filter ? "All" : filter));
-  };
+  const emptyMessage =
+    activeFilter === "All"
+      ? "No projects found."
+      : `No projects found for ${activeFilter}.`;
 
   return (
-    <div className="flex flex-col gap-12">
-      <PageHeader title="Featured" highlight="Projects" />
+    <div className="container mx-auto">
 
-      <ProjectFilter
-        allTechStacks={allTechStacks}
-        activeFilter={activeFilter}
-        onFilterChange={handleFilterClick}
-      />
+      {/* Page Header */}
+      <PageHeader title="" highlight="Projects" />
 
-      <FeaturedProjects
+      {/* Project Filter */}
+      <div className="mb-10">
+        <ProjectFilter
+          allTechStacks={allTechStacks}
+          activeFilter={activeFilter}
+          onFilterChange={handleFilterClick}
+        />
+      </div>
+
+      {/* Projects */}
+      <Projects
         projects={filteredProjects}
-        emptyMessage={`No projects found for ${activeFilter}.`}
+        emptyMessage={emptyMessage}
       />
     </div>
   );

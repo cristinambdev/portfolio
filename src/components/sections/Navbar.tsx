@@ -9,9 +9,9 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <header className="relative flex items-center justify-between">
+    <header className="relative flex items-center justify-between py-4">
       {/* Logo */}
-      <div className="font-serif text-2xl font-bold tracking-tight">
+      <a href="/" className="font-serif text-2xl font-bold tracking-tight">
 
         <img
           src={logoIcon}
@@ -22,7 +22,7 @@ export default function Navbar() {
         <div className="hidden sm:block">
           crismb<span className="text-brand-green">dev</span>
         </div>
-      </div>
+      </a>
 
       {/* Navigation */}
       <div className="flex items-center gap-4 md:gap-8">

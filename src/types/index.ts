@@ -13,9 +13,10 @@ export interface Project {
   description: string;
   techStacks: string[];
   links: ProjectLink[];
+  isFeatured: boolean;
 }
 
-export type ProjectCardProps = Project;
+export type ProjectCardProps = Omit<Project, "isFeatured">;
 
 export interface PageHeaderProps {
   title: string;
@@ -50,8 +51,12 @@ export interface ProjectFilterProps {
   onFilterChange: (filter: string) => void;
 }
 
-export interface FeaturedProjectsProps {
+export interface ProjectsProps {
   projects: Project[];
+  emptyMessage?: string;
+}
+
+export interface FeaturedProjectsProps {
   emptyMessage?: string;
 }
 

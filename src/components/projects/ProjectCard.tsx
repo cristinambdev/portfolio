@@ -38,8 +38,7 @@ export default function ProjectCard({
                   '#';
 
   return (
-    // The "group" class that allows to trigger hover effects on child elements
-    <div className="group flex flex-col justify-between p-6 sm:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all h-full">
+    <div className="group flex flex-col min-h-[420px] justify-between p-6 sm:p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all h-full ">
 
       <header>
         <h3 className="font-serif text-2xl font-bold mb-3">
@@ -57,11 +56,13 @@ export default function ProjectCard({
           </a>
         </h3>
 
-        <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed mb-8 relative z-10">
+        {/* Description */}
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed mb-8 relative z-10 line-clamp-4">
           {description}
         </p>
       </header>
 
+        {/* Footer*/}
       <footer className="relative z-10">
         <div className="mb-6 flex flex-wrap">{techStacksEntry}</div>
         <ul className="flex space-x-3">{linksEntry}</ul>

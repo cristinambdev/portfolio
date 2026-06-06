@@ -17,7 +17,7 @@ export default function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
   const handleLinkClick = () => setIsOpen(false);
 
   return (
-    <div className="absolute top-14 left-0 w-full z-50 bg-cream dark:bg-zinc-900/95 backdrop-blur-md border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl shadow-xl flex flex-col items-center py-8 md:hidden">
+    <div className="absolute top-14 left-0 w-full z-[60] bg-cream dark:bg-zinc-900/95 backdrop-blur-md border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl shadow-xl flex flex-col items-center py-8 md:hidden">
       <nav className="flex flex-col items-center gap-6 text-sm font-semibold tracking-widest text-zinc-500 dark:text-zinc-400 uppercase">
         <NavLink to="/" className={navLinkClasses} onClick={handleLinkClick}>
           Home
