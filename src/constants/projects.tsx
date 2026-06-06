@@ -1,7 +1,7 @@
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import type { ProjectProps } from "../types";
+import type { Project } from "../types";
 
-export const projectsData: ProjectProps[] = [
+export const projectsData: Project[] = [
 {
     title: "crismbdev",
     description: "A highly optimized, responsive personal developer portfolio. Built with a strict TypeScript architecture, custom Tailwind CSS animations, and reusable component patterns.",
@@ -30,3 +30,7 @@ export const projectsData: ProjectProps[] = [
     }
   // 3rd and 4th projects here!
 ];
+
+export const allTechStacks = Array.from(
+  new Set(projectsData.flatMap((project) => project.techStacks))
+);

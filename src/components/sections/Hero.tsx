@@ -1,4 +1,6 @@
 import Socials from "../common/Socials";
+import { projectsData } from "../../constants/projects";
+import FeaturedProjects from "./FeaturedProjects";
 
 export default function Hero() {
   return (
@@ -36,10 +38,11 @@ export default function Hero() {
       <Socials />
 
       {/* Scroll Indicator */}
-      <div className="w-full flex flex-col items-center gap-4 mt-32 opacity-50">
+      <div className="w-full flex flex-col items-center gap-4 mt-32 mb-32 opacity-50">
         <div className="w-px h-8 bg-linear-to-b from-zinc-600 to-transparent"></div>
         <span className="text-[14px] font-mono tracking-[0.2em] uppercase text-zinc-600 dark:text-zinc-400">Featured Projects</span>
       </div>
+      <FeaturedProjects projects={projectsData} />
 
     </section>
   );

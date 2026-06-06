@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
+import type { NavLinkClassName } from "../../types";
 
 export default function NavLinks() {
-  const navLinkClasses = ({ isActive }: { isActive: boolean }) => {
+  const navLinkClasses: NavLinkClassName = ({ isActive }) => {
 
     const baseClasses = "transition-all underline-offset-4 font-bold";
     const activeClasses = "text-brand-green font-bold underline decoration-brand-green";

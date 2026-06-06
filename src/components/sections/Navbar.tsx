@@ -6,7 +6,7 @@ import NavLinks from "../common/NavLinks";
 import MobileMenu from "../common/MobileMenu";
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
     <header className="relative flex items-center justify-between">

@@ -1,11 +1,11 @@
-import type { ProjectProps, LinkProps } from "../../types";
+import type { ProjectCardProps, ProjectLink } from "../../types";
 
 export default function ProjectCard({
   title,
   description,
   techStacks,
-  links
-}: ProjectProps) {
+  links,
+}: ProjectCardProps) {
 
   // Tech Badges
   const techStacksEntry = techStacks.map((techStack: string, index:number) => (
@@ -18,7 +18,7 @@ export default function ProjectCard({
   ));
 
   // Social/Repo Links
-  const linksEntry = links.map((link: LinkProps, index: number) => (
+  const linksEntry = links.map((link: ProjectLink, index: number) => (
     <li key={index} className="z-10">
       <a
         href={link.url}

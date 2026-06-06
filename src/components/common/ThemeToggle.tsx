@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { IoSunnyOutline, IoMoonOutline } from "react-icons/io5";
 
 export default function ThemeToggle() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");

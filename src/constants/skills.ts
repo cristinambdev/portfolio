@@ -1,7 +1,4 @@
-export interface SkillGroup {
-  category: string;
-  skills: string[];
-}
+import type { SkillGroup } from "../types";
 
 export const skillsData: SkillGroup[] = [
   {

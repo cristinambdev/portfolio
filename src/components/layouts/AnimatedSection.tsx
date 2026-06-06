@@ -1,10 +1,5 @@
-import { useEffect, useRef, useState} from "react";
-import type { ReactNode } from "react";
-
-interface AnimatedSectionProps {
-  children: ReactNode;
-  className?: string;
-}
+import { useEffect, useRef, useState } from "react";
+import type { AnimatedSectionProps } from "../../types";
 
 export default function AnimatedSection({ children, className = "" }: AnimatedSectionProps) {
   // State to track if the element has been scrolled into view

@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import type { MobileMenuProps } from "../../types";
+import type { MobileMenuProps, NavLinkClassName } from "../../types";
 
 
 export default function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
   if (!isOpen) return null;
 
-  const navLinkClasses = ({ isActive }: { isActive: boolean }) => {
+  const navLinkClasses: NavLinkClassName = ({ isActive }) => {
     const baseClasses = "transition-colors underline-offset-4";
     const activeClasses =
       "text-zinc-900 dark:text-zinc-100 underline decoration-brand-green";
