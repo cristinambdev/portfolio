@@ -2,33 +2,33 @@ export default function ContactForm() {
     return (
         <form className="space-y-4 max-w-2xl">
             <div>
-                <label htmlFor="name" className="block text-sm font-medium text-zinc-700">
+                <label htmlFor="name" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
                     Name
                 </label>
                 <input
                     type="text"
                     id="name"
-                    className="mt-1 block w-full border border-zinc-300 rounded-md shadow-sm focus:ring-brand-brick-red focus:border-brand-brick-red"
+                    className="mt-1 block w-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 rounded-md shadow-sm focus:ring-brand-brick-red focus:border-brand-brick-red"
                 />
             </div>
             <div>
-                <label htmlFor="email" className="block text-sm font-medium text-zinc-700">
+                <label htmlFor="email" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
                     Email
                 </label>
                 <input
                     type="email"
                     id="email"
-                    className="mt-1 block w-full border border-zinc-300 rounded-md shadow-sm focus:ring-brand-brick-red focus:border-brand-brick-red"
+                    className="mt-1 block w-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 rounded-md shadow-sm focus:ring-brand-brick-red focus:border-brand-brick-red"
                 />
             </div>
             <div>
-                <label htmlFor="message" className="block text-sm font-medium text-zinc-700">
+                <label htmlFor="message" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
                     Message
                 </label>
                 <textarea
                     id="message"
                     rows={4}
-                    className="mt-1 block w-full border border-zinc-300 rounded-md shadow-sm focus:ring-brand-brick-red focus:border-brand-brick-red"
+                    className="mt-1 block w-full border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 rounded-md shadow-sm focus:ring-brand-brick-red focus:border-brand-brick-red"
                 />
             </div>
             <button

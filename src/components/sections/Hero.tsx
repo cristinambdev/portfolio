@@ -10,11 +10,11 @@ export default function Hero() {
       </div>
 
       {/* Greeting */}
-      <div className="font-mono text-zinc-600 text-sm md:text-base flex items-center gap-2 mt-2">
+      <div className="font-mono text-zinc-600 dark:text-zinc-400 text-sm md:text-base flex items-center gap-2 mt-2">
         Hi, I'm Cristina Mosquera
       </div>
     {/* Main Headline */}
-      <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-[4.5rem] leading-[1.1] text-zinc-900 tracking-tight font-medium mt-4">
+      <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-[4.5rem] leading-[1.1] text-zinc-900 dark:text-zinc-100 tracking-tight font-medium mt-4">
         {/* Line 1: Always its own line */}
         <span>Fullstack developer</span>
         <br />
@@ -38,7 +38,7 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <div className="w-full flex flex-col items-center gap-4 mt-32 opacity-50">
         <div className="w-px h-8 bg-linear-to-b from-zinc-600 to-transparent"></div>
-        <span className="text-[14px] font-mono tracking-[0.2em] uppercase text-zinc-600">Featured Projects</span>
+        <span className="text-[14px] font-mono tracking-[0.2em] uppercase text-zinc-600 dark:text-zinc-400">Featured Projects</span>
       </div>
 
     </section>

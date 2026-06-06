@@ -16,6 +16,17 @@ export default function FeaturedProjects() {
     ? projectsData
     : projectsData.filter((project) => project.techStacks.includes(activeFilter));
 
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter((current) => (current === filter ? "All" : filter));
+  };
+
+  const filterButtonClasses = (filter: string) =>
+    `cursor-pointer px-4 py-2 text-xs md:text-sm font-mono font-semibold uppercase tracking-widest rounded-full border transition-all ${
+      activeFilter === filter
+        ? "bg-brand-green text-white border-brand-green shadow-md"
+        : "bg-white dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 border-zinc-200 dark:border-zinc-700 hover:border-brand-green/50 hover:text-brand-green"
+    }`;
+
   return (
     <section id="projects">
       <div className="flex flex-col gap-12">
@@ -25,12 +36,8 @@ export default function FeaturedProjects() {
         {/* The Filter Badges */}
         <div className="flex flex-wrap gap-2 md:gap-3">
           <button
-            onClick={() => setActiveFilter("All")}
-            className={`px-4 py-2 text-xs md:text-sm font-mono font-semibold uppercase tracking-widest rounded-full border transition-all ${
-              activeFilter === "All"
-                ? "bg-brand-green text-white border-brand-green shadow-md"
-                : "bg-white text-zinc-500 border-zinc-200 hover:border-brand-green/50 hover:text-brand-green"
-            }`}
+            onClick={() => handleFilterClick("All")}
+            className={filterButtonClasses("All")}
           >
             All
           </button>
@@ -38,12 +45,8 @@ export default function FeaturedProjects() {
           {allTechStacks.map((tech, index) => (
             <button
               key={index}
-              onClick={() => setActiveFilter(tech)}
-              className={`px-4 py-2 text-xs md:text-sm font-mono font-semibold uppercase tracking-widest rounded-full border transition-all ${
-                activeFilter === tech
-                  ? "bg-brand-green text-white border-brand-green shadow-md"
-                  : "bg-white text-zinc-500 border-zinc-200 hover:border-brand-green/50 hover:text-brand-green"
-              }`}
+              onClick={() => handleFilterClick(tech)}
+              className={filterButtonClasses(tech)}
             >
               {tech}
             </button>
@@ -65,7 +68,7 @@ export default function FeaturedProjects() {
 
         {/* Fallback Message */}
         {filteredProjects.length === 0 && (
-          <div className="text-center py-12 text-zinc-500 font-mono">
+          <div className="text-center py-12 text-zinc-500 dark:text-zinc-400 font-mono">
             No projects found for {activeFilter}.
           </div>
         )}

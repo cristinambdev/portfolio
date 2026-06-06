@@ -19,3 +19,8 @@ export interface PageHeaderProps {
   description?: string;
   className?: string;
 }
+
+export interface MobileMenuProps {
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
+}

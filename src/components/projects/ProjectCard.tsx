@@ -25,7 +25,7 @@ export default function ProjectCard({
         target="_blank"
         rel="noopener noreferrer"
         aria-label={link.label}
-        className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 bg-zinc-50 text-zinc-500 hover:text-brand-orange hover:border-brand-orange/50 hover:bg-orange-50 transition-all"
+        className="w-10 h-10 flex items-center justify-center rounded-lg border border-zinc-200 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-500 dark:text-zinc-400 hover:text-brand-orange hover:border-brand-orange/50 hover:bg-orange-50 dark:hover:bg-orange-950/30 transition-all"
       >
         {link.icon}
       </a>
@@ -39,14 +39,14 @@ export default function ProjectCard({
 
   return (
     // The "group" class that allows to trigger hover effects on child elements
-    <div className="group flex flex-col justify-between p-6 sm:p-8 rounded-2xl border border-zinc-200 bg-white/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all h-full">
+    <div className="group flex flex-col justify-between p-6 sm:p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all h-full">
 
       <header>
         <h3 className="font-serif text-2xl font-bold mb-3">
           {/* Main Title Link */}
           <a
             href={mainUrl}
-            className="text-zinc-900 group-hover:text-brand-green transition-colors focus:outline-none"
+            className="text-zinc-900 dark:text-zinc-100 group-hover:text-brand-green transition-colors focus:outline-none"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -57,7 +57,7 @@ export default function ProjectCard({
           </a>
         </h3>
 
-        <p className="text-zinc-600 text-sm md:text-base leading-relaxed mb-8 relative z-10">
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed mb-8 relative z-10">
           {description}
         </p>
       </header>

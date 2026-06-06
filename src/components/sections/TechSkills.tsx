@@ -10,7 +10,7 @@ export default function TechSkills() {
 
             {/* Category Title */}
             <div>
-              <h3 className="font-serif text-xl md:text-2xl text-zinc-900 border-b border-zinc-200 pb-2">
+              <h3 className="font-serif text-xl md:text-2xl text-zinc-900 dark:text-zinc-100 border-b border-zinc-200 dark:border-zinc-800 pb-2">
                 {group.category}
               </h3>
             </div>

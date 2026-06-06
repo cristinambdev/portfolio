@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between">
+    <header className="relative flex items-center justify-between">
       {/* Logo */}
       <div className="font-serif text-2xl font-bold tracking-tight">
 
@@ -20,7 +20,7 @@ export default function Navbar() {
         />
 
         <div className="hidden sm:block">
-          crismb<span className="text-brand-brick-red">dev</span>
+          crismb<span className="text-brand-green">dev</span>
         </div>
       </div>
 
@@ -31,16 +31,16 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           aria-label="Toggle Menu"
-          className="md:hidden text-zinc-600 hover:text-zinc-900 transition-colors"
+          className="md:hidden text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <IoCloseOutline size={24} /> : <IoMenuOutline size={24} />}
         </button>
-        {/* The Extracted Mobile Menu */}
-        <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
 
         {/* Theme Toggle */}
         <ThemeToggle />
       </div>
+
+      <MobileMenu isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
     </header>
   );
 }
