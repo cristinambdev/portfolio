@@ -1,20 +1,22 @@
 import Socials from "../common/Socials";
+import CascadeWrapper from "../layouts/CascadeWrapper";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col items-start gap-6 pt-10">
+    <CascadeWrapper>
+      <section className="flex flex-col items-start gap-6 pt-10 min-h-[calc(100vh-6rem)]">
 
       {/* Badge */}
-      <div className="border border-brand-green/30 bg-brand-green/5 text-brand-green px-3 py-1 rounded-sm text-[12px] font-mono tracking-widest uppercase font-semibold">
+      <div className="animate-hero [animation-delay:100ms] border border-brand-green/30 bg-brand-green/5 text-brand-green px-3 py-1 rounded-sm text-[12px] font-mono tracking-widest uppercase font-semibold">
         Available for work
       </div>
 
       {/* Greeting */}
-      <div className="font-mono text-zinc-600 dark:text-zinc-400 text-sm md:text-base flex items-center gap-2 mt-2">
+      <div className="animate-hero [animation-delay:200ms] font-mono text-zinc-600 dark:text-zinc-400 text-sm md:text-base flex items-center gap-2 mt-2">
         Hi, I'm Cristina Mosquera
       </div>
     {/* Main Headline */}
-      <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-[4.5rem] leading-[1.1] text-zinc-900 dark:text-zinc-100 tracking-tight font-medium mt-4">
+      <h1 className="animate-hero [animation-delay:300ms] font-serif text-4xl sm:text-5xl md:text-7xl lg:text-[4.5rem] leading-[1.1] text-zinc-900 dark:text-zinc-100 tracking-tight font-medium mt-4">
         {/* Line 1: Always its own line */}
         <span>Fullstack developer</span>
         <br />
@@ -33,7 +35,7 @@ export default function Hero() {
       </h1>
 
     {/* Social Buttons */}
-      <Socials />
+      <Socials  className="animate-hero [animation-delay:400ms] flex gap-3" />
 
       {/* Scroll Indicator */}
       <a
@@ -49,7 +51,7 @@ export default function Hero() {
 
           window.scrollTo({ top, behavior: "smooth" });
         }}
-        className="w-full flex flex-col items-center mt-32 mb-32 opacity-50 hover:opacity-100 transition-opacity cursor-pointer focus:outline-none"
+        className="animate-hero [animation-delay:600ms] mt-auto mb-16 w-full flex flex-col items-center opacity-50 hover:opacity-100 transition-opacity cursor-pointer focus:outline-none"
         aria-label="Scroll to Featured Projects"
       >
         {/* The Animated Arrow */}
@@ -69,6 +71,7 @@ export default function Hero() {
         </span>
       </a>
 
-    </section>
+      </section>
+    </CascadeWrapper>
   );
 }

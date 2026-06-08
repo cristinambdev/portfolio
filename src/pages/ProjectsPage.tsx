@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PageHeader from "../components/common/PageHeader";
+import CascadeWrapper from "../components/layouts/CascadeWrapper";
 import ProjectFilter from "../components/projects/ProjectFilter";
 import Projects from "../components/projects/Projects";
 import { allTechStacks, projectsData } from "../constants/projects";
@@ -25,24 +26,23 @@ export default function ProjectsPage() {
 
   return (
     <div className="container mx-auto">
+      <CascadeWrapper>
+        <PageHeader title="Projects" highlight="" className="cascade-item mb-8 md:mb-12" />
 
-      {/* Page Header */}
-      <PageHeader title="Projects" highlight="" />
+        <div className="cascade-item mb-10">
+          <ProjectFilter
+            allTechStacks={allTechStacks}
+            activeFilter={activeFilter}
+            onFilterChange={handleFilterClick}
+          />
+        </div>
 
-      {/* Project Filter */}
-      <div className="mb-10">
-        <ProjectFilter
-          allTechStacks={allTechStacks}
-          activeFilter={activeFilter}
-          onFilterChange={handleFilterClick}
+        <Projects
+          projects={filteredProjects}
+          emptyMessage={emptyMessage}
+          cascadeItems
         />
-      </div>
-
-      {/* Projects */}
-      <Projects
-        projects={filteredProjects}
-        emptyMessage={emptyMessage}
-      />
+      </CascadeWrapper>
     </div>
   );
 }

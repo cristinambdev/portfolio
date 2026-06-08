@@ -3,7 +3,7 @@ import Socials from "../common/Socials";
 export default function ContactForm() {
     return (
         <>
-        <div className="flex flex-col items-center py-12 text-zinc-500 dark:text-zinc-400 font-mono">
+        <div className="flex flex-col items-center text-center py-12 text-zinc-500 dark:text-zinc-400 font-mono">
         <p className="text-lg">Coming soon...</p>
         <p className="text-lg">Meanwhile, feel free to reach out via email!</p>
         <Socials platforms={["email"]} className="center mb-4" />

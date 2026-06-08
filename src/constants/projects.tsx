@@ -5,7 +5,7 @@ export const projectsData: Project[] = [
   {
     title: "crismbdev",
     description:
-      "A highly optimized, responsive personal developer portfolio. Built with a strict TypeScript architecture, custom Tailwind CSS animations, and reusable component patterns.",
+      "A personal developer portfolio. Built with a strict TypeScript architecture, custom Tailwind CSS animations, and reusable component patterns.",
     techStacks: ["React", "TypeScript", "Tailwind CSS"],
     isFeatured: true,
     links: [
@@ -16,7 +16,7 @@ export const projectsData: Project[] = [
       },
       {
         label: "Live",
-        url: "#",
+        url: "https://crismbdev.netlify.app/",
         icon: <FaExternalLinkAlt size={18} />,
       },
     ],
@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
   {
     title: "Rodda",
     description:
-      "A full-stack event platform designed to simplify group coordination. Built from the ground up with a focus on a hybrid architecture and secure, role-based access control.",
+      "A full-stack event platform designed to simplify group coordination. Built from the ground up with a focus on a hybrid architecture and secure, role-based access control. Prototype available at external link icon",
     techStacks: [
       "C#",
       "ASP.NET Core",
@@ -51,27 +51,13 @@ export const projectsData: Project[] = [
   {
     title: "Silicon App",
     description:
-      "A React-based web application built with Vite. Demonstrates component-driven architecture, modern JavaScript patterns, and fast development workflows.",
+      "A React-based web application built with Vite. Component-driven architecture, modern JavaScript patterns, and fast development workflows.",
     techStacks: ["React", "JavaScript", "CSS", "HTML", "Vite"],
     isFeatured: false,
     links: [
       {
         label: "Source code",
         url: "https://github.com/cristinambdev/siliconapp-react.git",
-        icon: <FaGithub size={20} />,
-      },
-    ],
-  },
-  {
-    title: "Version Management",
-    description:
-      "A version control and release management tool built to track software versioning workflows and automate changelog processes.",
-    techStacks: ["C#", "ASP.NET Core"],
-    isFeatured: false,
-    links: [
-      {
-        label: "Source code",
-        url: "https://github.com/cristinambdev/VersionManagement.git",
         icon: <FaGithub size={20} />,
       },
     ],
@@ -107,7 +93,7 @@ export const projectsData: Project[] = [
   {
     title: "Alpha Project",
     description:
-      "A full-stack web application structured with a professional layered architecture spanning Business, Data, Domain, and Presentation layers. Built with C# and ASP.NET.",
+      "A full-stack web application structured with a layered architecture spanning Business, Data, Domain, and Presentation layers. Built with C# and ASP.NET.",
     techStacks: ["C#", "ASP.NET Core", "JavaScript", "CSS", "HTML"],
     isFeatured: true,
     links: [

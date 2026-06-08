@@ -4,18 +4,20 @@ import ProjectCard from "./ProjectCard";
 export default function Projects({
   projects,
   emptyMessage = "No projects found.",
+  cascadeItems = false,
 }: ProjectsProps) {
   return (
     <div className="flex flex-col gap-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
         {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            techStacks={project.techStacks}
-            links={project.links}
-          />
+          <div key={project.title} className={cascadeItems ? "cascade-item" : undefined}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              techStacks={project.techStacks}
+              links={project.links}
+            />
+          </div>
         ))}
       </div>
 

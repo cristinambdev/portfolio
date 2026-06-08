@@ -1,6 +1,5 @@
 /**
  * Shared TypeScript contracts for portfolio data and component props.
- * Keeps constants and UI components aligned on the same shapes.
  */
 import type { ReactNode } from "react";
 import type { IconType } from "react-icons";
@@ -30,6 +29,7 @@ export type ProjectCardProps = Omit<Project, "isFeatured">;
 export interface ProjectsProps {
   projects: Project[];
   emptyMessage?: string;
+  cascadeItems?: boolean;
 }
 
 /** Props for the home page featured section (projects come from constants). */
@@ -62,12 +62,6 @@ export interface MobileMenuProps {
 
 /** React Router NavLink className fn — receives isActive and returns a CSS class string. */
 export type NavLinkClassName = (state: { isActive: boolean }) => string;
-
-/** Props for the scroll/fade-in section wrapper. */
-export interface AnimatedSectionProps {
-  children: ReactNode;
-  className?: string;
-}
 
 // ─── About / skills ───────────────────────────────────────────────────────────
 
