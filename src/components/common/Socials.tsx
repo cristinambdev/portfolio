@@ -1,29 +1,39 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import type { SocialLink } from "../../types";
+import type { SocialLinkItem, SocialsProps } from "../../types";
 
-const socialLinks: SocialLink[] = [
+const socialLinks: SocialLinkItem[] = [
   {
+    id: "email",
     Icon: MdEmail,
     url: "mailto:mosquera.cristina@gmail.com",
     label: "Email Me",
   },
   {
+    id: "linkedin",
     Icon: FaLinkedin,
     url: "https://www.linkedin.com/in/cristina-m-blanco-dev",
     label: "LinkedIn Profile",
   },
   {
+    id: "github",
     Icon: FaGithub,
     url: "https://github.com/cristinambdev",
     label: "GitHub Profile",
   },
 ];
 
-export default function Socials() {
+export default function Socials({
+  platforms,
+  className = "flex gap-4 mt-8",
+}: SocialsProps) {
+  const links = platforms
+    ? socialLinks.filter((link) => platforms.includes(link.id))
+    : socialLinks;
+
   return (
-    <div className="flex gap-4 mt-8">
-      {socialLinks.map(({ Icon, url, label }, index) => (
+    <div className={className}>
+      {links.map(({ Icon, url, label }, index) => (
         <a
           key={index}
           href={url}

@@ -1,6 +1,16 @@
+import Socials from "../common/Socials";
+
 export default function ContactForm() {
     return (
-        <form className="space-y-4 max-w-2xl">
+        <>
+        <div className="flex flex-col items-center py-12 text-zinc-500 dark:text-zinc-400 font-mono">
+        <p className="text-lg">Coming soon...</p>
+        <p className="text-lg">Meanwhile, feel free to reach out via email!</p>
+        <Socials platforms={["email"]} className="center mb-4" />
+    </div>
+        </>
+    );
+        {/*<form className="space-y-4 max-w-2xl">
             <div>
                 <label htmlFor="name" className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">
                     Name
@@ -38,5 +48,6 @@ export default function ContactForm() {
                 Send Message
             </button>
         </form>
-    );
+    */}
+
 }

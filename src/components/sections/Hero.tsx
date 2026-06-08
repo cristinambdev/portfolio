@@ -40,7 +40,14 @@ export default function Hero() {
         href="#featured-projects"
         onClick={(e) => {
           e.preventDefault();
-          document.getElementById("featured-projects")?.scrollIntoView({ behavior: "smooth" });
+          const target = document.getElementById("featured-projects");
+          if (!target) return;
+
+          const headerOffset = 96;
+          const top =
+            target.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+          window.scrollTo({ top, behavior: "smooth" });
         }}
         className="w-full flex flex-col items-center mt-32 mb-32 opacity-50 hover:opacity-100 transition-opacity cursor-pointer focus:outline-none"
         aria-label="Scroll to Featured Projects"

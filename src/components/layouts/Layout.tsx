@@ -2,11 +2,13 @@ import Navbar from '../sections/Navbar';
 import { Outlet } from 'react-router-dom';
 import Footer from '../sections/Footer';
 import ScrollToTop from '../common/ScrollToTop';
+import BackToTop from '../common/BackToTop';
 
 export default function Layout() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative flex flex-col">
       <ScrollToTop />
+      <BackToTop />
       {/* Background Gradients */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 right-0 w-125 h-125 bg-emerald-100/40 dark:bg-emerald-950/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
@@ -19,8 +21,8 @@ export default function Layout() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 pb-4 md:px-8 md:pb-12 pt-6 md:pt-12 flex flex-col gap-10 md:gap-20">
-        <main>
+      <div className="flex-grow w-full max-w-7xl mx-auto px-4 pb-4 md:px-8 md:pb-12 pt-6 md:pt-12 flex flex-col gap-10 md:gap-20">
+        <main className="flex-grow">
           <Outlet />
         </main>
         <Footer />

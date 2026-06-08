@@ -27,7 +27,7 @@ export default function ProjectsPage() {
     <div className="container mx-auto">
 
       {/* Page Header */}
-      <PageHeader title="" highlight="Projects" />
+      <PageHeader title="Projects" highlight="" />
 
       {/* Project Filter */}
       <div className="mb-10">

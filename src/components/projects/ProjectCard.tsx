@@ -57,7 +57,7 @@ export default function ProjectCard({
         </h3>
 
         {/* Description */}
-        <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed mb-8 relative z-10 line-clamp-4">
+        <p className="text-zinc-600 dark:text-zinc-400 text-sm md:text-base leading-relaxed mb-8 relative z-10 line-clamp-8">
           {description}
         </p>
       </header>
