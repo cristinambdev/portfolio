@@ -15,11 +15,10 @@ export default function PageHeader({
       </h2>
 
       {description && (
-        <p className="cascade-item text-zinc-600 dark:text-zinc-400 max-w-2xl text-lg">
+        <p className="cascade-item text-lg text-zinc-500 dark:text-zinc-400 font-sans max-w-md leading-relaxed">
           {description}
         </p>
       )}
-
     </CascadeWrapper>
   );
 }

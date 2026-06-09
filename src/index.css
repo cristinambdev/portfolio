@@ -44,5 +44,5 @@ body {
 .cascade-wrapper.cascade-visible .cascade-item:nth-child(6) { transition-delay: 600ms; }
 
 .container {
-  @apply mx-auto px-4 py-12;
+  @apply mx-auto px-4 py-8;
 }

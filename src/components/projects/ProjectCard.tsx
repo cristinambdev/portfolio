@@ -38,7 +38,7 @@ export default function ProjectCard({
                   '#';
 
   return (
-    <div className="group flex flex-col min-h-[420px] justify-between p-6 sm:p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all h-full ">
+    <div className="group flex flex-col min-h-[420px] justify-between p-6 sm:p-8 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all h-full">
 
       <header>
         <h3 className="font-serif text-2xl font-bold mb-3">
