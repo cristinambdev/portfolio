@@ -25,24 +25,25 @@ export default function ProjectsPage() {
       : `No projects found for ${activeFilter}.`;
 
   return (
-    <div className="container mx-auto">
-      <CascadeWrapper>
-        <PageHeader title="Projects" highlight="" className="cascade-item mb-8 md:mb-12" />
+    <div className="container">
 
-        <div className="cascade-item mb-10">
+        <PageHeader title="Projects" highlight="" className="mb-8 md:mb-12" />
+
+        <CascadeWrapper>
+        <div className="cascade-item">
           <ProjectFilter
             allTechStacks={allTechStacks}
             activeFilter={activeFilter}
             onFilterChange={handleFilterClick}
           />
         </div>
+      </CascadeWrapper>
 
         <Projects
           projects={filteredProjects}
           emptyMessage={emptyMessage}
           cascadeItems
         />
-      </CascadeWrapper>
     </div>
   );
 }

@@ -10,13 +10,17 @@ export default function FeaturedProjects({
   emptyMessage = "No featured projects found.",
 }: FeaturedProjectsProps) {
   return (
-    <CascadeWrapper>
       <section
         id="featured-projects"
         className="scroll-mt-24 pt-12 md:pt-20 pb-20 md:pb-32"
       >
-        <PageHeader title="Featured" highlight="Projects" className="cascade-item mb-8 md:mb-12" />
+        <CascadeWrapper>
+          <PageHeader title="Featured" highlight="Projects" className="cascade-item mb-8 md:mb-12" />
+        </CascadeWrapper>
         <Projects projects={featuredProjects} emptyMessage={emptyMessage} cascadeItems />
+
+
+        <CascadeWrapper>
         <div className="cascade-item text-start px-6 text-zinc-500 dark:text-zinc-400 font-mono">
           <Link
             to="/projects"
@@ -29,7 +33,7 @@ export default function FeaturedProjects({
             />
           </Link>
         </div>
+        </CascadeWrapper>
       </section>
-    </CascadeWrapper>
   );
 }

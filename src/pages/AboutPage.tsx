@@ -9,15 +9,17 @@ export default function AboutPage() {
 
   return (
 
-    <div className="container mx-auto">
+    <div className="container">
 
        {/* Section Header */}
-       <PageHeader
+        <PageHeader
          title="About"
          highlight="Me"
        />
 
-       <Socials platforms={["linkedin"]} className="mb-4" />
+
+      {/* Socials */}
+       <Socials animated={true} platforms={["linkedin"]} className="mb-4" />
 
        {/* flex-col for mobile (stacked)
          lg:flex-row for desktop (side by side) */}

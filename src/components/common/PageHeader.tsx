@@ -1,4 +1,5 @@
 import type { PageHeaderProps } from "../../types";
+import CascadeWrapper from "../layouts/CascadeWrapper";
 
 export default function PageHeader({
   title,
@@ -7,17 +8,18 @@ export default function PageHeader({
   className = "mb-8 md:mb-12" // Default bottom margin
 }: PageHeaderProps) {
   return (
-    <div className={className}>
-      <h2 className="font-serif text-3xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+    <CascadeWrapper className={className}>
+
+      <h2 className="cascade-item font-serif text-3xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">
         {title} {highlight && <span className="text-brand-green">{highlight}</span>}
       </h2>
 
-      {/* Only render the paragraph if a description was actually provided */}
       {description && (
-        <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl text-lg">
+        <p className="cascade-item text-zinc-600 dark:text-zinc-400 max-w-2xl text-lg">
           {description}
         </p>
       )}
-    </div>
+
+    </CascadeWrapper>
   );
 }

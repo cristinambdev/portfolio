@@ -92,4 +92,5 @@ export interface SocialLinkItem extends SocialLink {
 export interface SocialsProps {
   platforms?: SocialPlatform[];
   className?: string;
+  animated?: boolean;
 }
