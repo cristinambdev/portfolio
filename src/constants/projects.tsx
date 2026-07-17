@@ -105,6 +105,20 @@ export const projectsData: Project[] = [
     ],
   },
   {
+    title: "Smart Task Manager",
+    description:
+      "A lightweight Python command-line application to organize daily tasks efficiently. Features manual CRUD operations and an OpenAI-powered integration to automatically break down complex tasks into actionable subtasks with local JSON persistence.",
+    techStacks: ["Python", "OpenAI API", "JSON"],
+    isFeatured: false,
+    links: [
+      {
+        label: "Source code",
+        url: "https://github.com/cristinambdev/taskmanager.git", 
+        icon: <FaGithub size={20} />,
+      },
+    ],
+  },
+  {
     title: "Onatrix CMS",
     description:
       "A content management system built on Umbraco and ASP.NET Core. Features custom controllers, services, view models, a rich text editor plugin, and a CI/CD pipeline via GitHub Actions.",
